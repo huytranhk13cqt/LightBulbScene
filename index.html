@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./light.css" />
+	</head>
+	<body>
+		<h3>Design Your Life - Like - IoT Lights</h3>
+		<div class="picture">
+			<div class="back">
+				<img class="hieuUng" id="slider" src="./img/1full.jpeg" />
+			</div>
+		</div>
+		<div class="button">
+			<button class="btn-grad-1 btn-grad" id="next" onclick="next()">Next</button>
+			<button class="btn-grad-2 btn-grad" id="nc1" onclick="nc1()">Romantic Scene</button>
+			<button class="btn-grad-3 btn-grad" id="nc2" onclick="nc2()">Foresr Scene</button>
+			<button class="btn-grad-4 btn-grad" id="nc3" onclick="nc3()">Ocean Scene</button>
+			<button class="btn-grad-5 btn-grad" id="prev" onclick="prev()">Previous</button>
+			<button class="btn-grad-6 btn-grad" id="auto" onclick="changeImg">Auto</button>
+		</div>
+
+		<!-- Javascript -->
+		<script>
+			var images = ['./img/1full.jpeg', './img/2full.jpeg', './img/3full.jpeg'];
+			var num = 0;
+			var autoV = 0;
+			function nc1() {
+				var slider = document.getElementById('slider');
+				slider.style.transition = 'opacity 0.5s ease 0s';
+				slider.style.opacity = '0.8';
+
+				setTimeout(() => {
+					slider.style.opacity = '1';
+					slider.src = images[0];
+				}, 350);
+				return (num = 0);
+			}
+
+			function nc2() {
+				var slider = document.getElementById('slider');
+				slider.style.transition = 'opacity 0.5s ease 0s';
+				slider.style.opacity = '0.8';
+
+				setTimeout(() => {
+					slider.style.opacity = '1';
+					slider.src = images[1];
+				}, 350);
+				return (num = 1);
+			}
+
+			function nc3() {
+				var slider = document.getElementById('slider');
+				slider.style.transition = 'opacity 0.5s ease 0s';
+				slider.style.opacity = '0.8';
+
+				setTimeout(() => {
+					slider.style.opacity = '1';
+					slider.src = images[2];
+				}, 350);
+				return (num = 2);
+			}
+
+			function next() {
+				var slider = document.getElementById('slider');
+				slider.style.transition = 'opacity 0.5s ease 0s';
+				slider.style.opacity = '0.8';
+
+				setTimeout(() => {
+					slider.style.opacity = '1';
+					if (num === 2) {
+						slider.src = images[0];
+						num = 0;
+					} else {
+						slider.src = images[num + 1];
+						num++;
+					}
+				}, 350);
+				return num;
+			}
+
+			function prev() {
+				var slider = document.getElementById('slider');
+				slider.style.transition = 'opacity 0.5s ease 0s';
+				slider.style.opacity = '0.8';
+
+				setTimeout(() => {
+					slider.style.opacity = '1';
+					if (num === 0) {
+						slider.src = images[2];
+						num = 2;
+					} else {
+						slider.src = images[num - 1];
+						num--;
+					}
+				}, 350);
+			}
+
+			changeImg = function automation() {
+				var slider = document.getElementById('slider');
+				slider.style.transition = 'opacity 0.5s ease 0s';
+				slider.style.opacity = '0.8';
+
+				setTimeout(() => {
+					slider.style.opacity = '0.1';
+
+					if (num === 2) {
+						slider.src = images[0];
+						num = 0;
+					} else {
+						slider.src = images[num + 1];
+						num++;
+					}
+				}, 100);
+				return num;
+			};
+
+			function auto() {
+				setInterval(changeImg, 3000);
+			}
+		</script>
+	</body>
+</html>

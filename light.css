@@ -1,0 +1,282 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: 0;
+}
+body {
+	/* background: linear-gradient(#12c2e9, #c471ed, #f64f59); */
+	background-color: black;
+}
+
+/* ----- Picture ----- */
+.picture {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.5s ease 0s;
+}
+.back {
+	width: 80%;
+	height: 80vh;
+	background: url(./img/black3.jpg) no-repeat;
+}
+.picture img {
+	width: 100%;
+	height: 80vh;
+}
+
+/* ----- Text ----- */
+h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 400px;
+	margin-right: 400px;
+	font-size: 14px;
+	padding: 4px;
+	text-align: center;
+	background: linear-gradient(to right, #dd5e89 0%, #faa36d 51%, #dd5e89 100%);
+	color: #f7ff00;
+	border-radius: 6px;
+	/* box-shadow: 0 0 10px yellow; */
+}
+
+h3:hover {
+	box-shadow: 0 0 30px yellow;
+}
+
+/* ----- Button ----- */
+.button {
+	margin-top: 2vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button:hover {
+	box-shadow: 0 0 30px rgb(255, 255, 0);
+}
+
+#nc1,
+#nc2,
+#nc3,
+#next,
+#prev,
+#auto {
+	width: 15%;
+	height: 8.5vh;
+	margin: 0 10px 10px;
+}
+/* ----- Button Animation ----- */
+.btn-grad-1 {
+	background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+}
+.btn-grad-2 {
+	background-image: linear-gradient(
+		to right,
+		#1432bd,
+		#5931b7,
+		#7a32b0,
+		#9337a9,
+		#a63ea3,
+		#b83e98,
+		#c7418d,
+		#d24782,
+		#dc4a6c,
+		#e05356,
+		#dd6040,
+		#d56f2b
+	);
+}
+.btn-grad-3 {
+	background-image: linear-gradient(
+		to right,
+		#dde133,
+		#c9e328,
+		#b2e421,
+		#99e51f,
+		#7ae624,
+		#65e431,
+		#4ee23d,
+		#2cdf47,
+		#20d953,
+		#14d35d,
+		#0ccd66,
+		#0cc76d
+	);
+}
+
+.btn-grad-6 {
+	background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+}
+.btn-grad-5 {
+	background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+}
+.btn-grad-4 {
+	background-image: linear-gradient(
+		to right,
+		#2839ff,
+		#254cfc,
+		#2c5bf8,
+		#3968f2,
+		#4974eb,
+		#5c75ea,
+		#6c77e8,
+		#7978e7,
+		#916de8,
+		#ab5ee4,
+		#c449dc,
+		#dd25cf
+	);
+}
+
+.btn-grad {
+	margin: 10px;
+	padding: 8px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	border-radius: 10px;
+	display: block;
+}
+
+.btn-grad:hover {
+	background-position: right center; /* change the direction of the change here */
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+/* ----- Animation ----- */
+#slider,
+h2 {
+	animation: chuyendoi 1s;
+}
+#next {
+	animation: chuyendoibtn 2s;
+}
+#nc1 {
+	animation: chuyendoibtn 3s;
+}
+
+#nc2 {
+	animation: chuyendoibtn 4s;
+}
+
+#nc3 {
+	animation: chuyendoibtn 5s;
+}
+
+#prev {
+	animation: chuyendoibtn 6s;
+}
+
+#auto {
+	animation: chuyendoibtn 7s;
+}
+
+@keyframes chuyendoi {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.1;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	30% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	70% {
+		opacity: 0.7;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes chuyendoibtn {
+	0% {
+		/* display: none; */
+		background: transparent;
+		color: black;
+	}
+	20% {
+		background: transparent;
+		color: black;
+		box-shadow: 0 0 5px yellow;
+	}
+	30% {
+		background: transparent;
+		color: black;
+		box-shadow: 0 0 6px yellow;
+	}
+	40% {
+		background: transparent;
+		color: black;
+		box-shadow: 0 0 7px yellow;
+	}
+	50% {
+		background: transparent;
+		color: black;
+		box-shadow: 0 0 10px yellow;
+	}
+	60% {
+		background: transparent;
+		color: black;
+		box-shadow: 0 0 15px yellow;
+	}
+	70% {
+		background: transparent;
+		color: black;
+		box-shadow: 0 0 20px yellow;
+	}
+	75% {
+		background: transparent;
+		color: white;
+		box-shadow: 0 0 15px yellow;
+	}
+	80% {
+		background: transparent;
+		color: white;
+		box-shadow: 0 0 10px yellow;
+	}
+	85% {
+		background: transparent;
+		color: white;
+		box-shadow: 0 0 5px yellow;
+	}
+	90% {
+		background: transparent;
+		color: white;
+		box-shadow: 0 0 0px yellow;
+	}
+}
